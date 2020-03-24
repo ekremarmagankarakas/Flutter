@@ -1,0 +1,57 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(
+    MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.blueGrey[900],
+        appBar: AppBar(
+            title: Text('Hello'),
+            backgroundColor: Colors.deepOrange
+        ),
+        body: Center(
+          child: Image(
+              image:
+              NetworkImage('https://yydxg3i41b1482qi9hidybgs-wpengine.netdna-ssl.com/wp-content/uploads/2015/05/SchoolMakerFaire_logo_large.png')
+          ),
+        ),
+        drawer: Drawer(
+          child: ListView(
+            children: <Widget>[
+              DrawerHeader(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(colors: <Color>[
+                      Colors.deepOrange,
+                      Colors.orangeAccent
+                    ])
+                  ),
+                  child: Text('Header')),
+              ListTile(
+                title: Text('Tile 1'),
+              ),
+              ListTile(
+                title: Text('Tile 2'),
+              ),
+              ListTile(
+                title: Text('Tile 3'),
+              ),
+              ListTile(
+                title: Text('Tile 4'),
+              ),
+            ],
+          ),
+        ),
+        bottomNavigationBar: BottomAppBar(
+          shape: const CircularNotchedRectangle(),
+          child: Container(height: 50.0,),
+        ),
+        floatingActionButton: FloatingActionButton(
+          tooltip: 'Increment Counter',
+          child: Icon(Icons.add),
+          backgroundColor: Colors.deepOrange,
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      ),
+    ),
+  );
+}
